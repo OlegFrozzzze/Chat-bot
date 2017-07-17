@@ -45,5 +45,6 @@ class SimpleChatBot extends JFrame {
         add(BorderLayout.CENTER, scrollBar);
         add(BorderLayout.SOUTH, bp);
         setVisible(true);
+        
     }
 }
