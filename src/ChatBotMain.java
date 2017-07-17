@@ -18,8 +18,13 @@ class SimpleChatBot extends JFrame {
     public static void main(String[] args) {
         new SimpleChatBot();
     }
-    
+
     SimpleChatBot(){
+        setTitle(TITLE_OF_PROGRAM);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setBounds(START_LOCATION, START_LOCATION, WINDOW_WIDTH, WINDOW_HEIGHT);
+
+        setVisible(true);
 
     }
 }
