@@ -27,6 +27,7 @@ class SimpleChatBot extends JFrame {
         dialogue = new JTextArea();
         dialogue.setLineWrap(true);
         JScrollPane scrollBar = new JScrollPane(dialogue);
+
         //Понель для ввода сообщений и кнопок
         JPanel bp = new JPanel();
         bp.setLayout(new BoxLayout(bp, BoxLayout.X_AXIS));
@@ -35,9 +36,14 @@ class SimpleChatBot extends JFrame {
         message = new JTextField();
 
         JButton enter = new JButton("Enter");
-        
+                //добавление кнопок
+                bp.add(ai);
+                bp.add(message);
+                bp.add(enter);
+
 
         add(BorderLayout.CENTER, scrollBar);
+        add(BorderLayout.SOUTH, bp);
         setVisible(true);
     }
 }
