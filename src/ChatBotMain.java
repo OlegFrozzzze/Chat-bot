@@ -9,7 +9,7 @@ class SimpleChatBot extends JFrame {
     final int WINDOW_WIDTH = 350;
     final int WINDOW_HEIGHT = 450;
 
-    JTextPane dialogue; // area for dialog
+    JTextArea dialogue; // area for dialog
     JCheckBox ai;       // enable/disable AI
     JTextField message; // field for entering messages
    // SimpleBot sbot;     // chat-bot class (in bot package)
@@ -23,8 +23,13 @@ class SimpleChatBot extends JFrame {
         setTitle(TITLE_OF_PROGRAM);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setBounds(START_LOCATION, START_LOCATION, WINDOW_WIDTH, WINDOW_HEIGHT);
+        //Диалоговое окно
+        dialogue = new JTextArea();
+        dialogue.setLineWrap(true);
+        JScrollPane scrollBar = new JScrollPane(dialogue);
+        
 
+        add(BorderLayout.CENTER,scrollBar);
         setVisible(true);
-
     }
 }
